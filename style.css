@@ -1,0 +1,194 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+}
+
+#header {
+    background: #ccc;
+    height: 100px;
+    display: inline-flex;
+    width: 100%;
+}
+
+#header h1 {
+    margin: 0;
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* dropdown menu*/
+
+.dropbtn {
+    background-color: #ccc;
+    color: black;
+    padding: 16px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: orange;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content:flex-end;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color:orange;
+    text-decoration: none;
+    color: black;
+
+}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+/* end of dropdown menu*/
+
+
+
+img{
+    height:300px;
+    width: 100%;
+}
+
+.postbottom{
+    /*display: inline-flex;
+    align-content: space-between;*/
+    width: 301px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.number{
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+main {
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: left;
+    width: 100%;
+}
+
+#nav {
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: left;
+    width: 230px;
+    margin-left: -100%;
+    background: #eee;
+}
+
+#footer {
+    clear: left;
+    width: 100%;
+    background: #ccc;
+    text-align: center;
+    padding: 4px 0;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+            
+#content {
+    margin-left: 230px; /* Same as 'nav' width */
+}
+
+.logo{
+    height: 40px;
+    width: 100px;
+}
+
+
+.feedblock { 
+    
+    width: 301px; 
+    height: 360px;
+    background-color: #acacac;
+    margin: 10px;
+    box-shadow: 3px 3px lightgrey;
+    
+}
+
+.innertube {
+    margin: 15px; /* Padding for content */
+    margin-top: 0;
+    width: 50%;
+}
+
+.innertube a{
+    color: black;
+    text-decoration: none;
+}
+
+.innertube a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.feed{
+    margin: 15px; /* Padding for content */
+    margin-top: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+p {
+    color: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    background-color:orange;
+    text-decoration: underline;
+    color: black;
+}
