@@ -49,7 +49,7 @@
 
 		<header id="header">
 			<div class="innertube">
-				<a href="index.php"><h1>Cuse Swaps</h1></a>
+				<a href="bicycles.php"><h1>Cuse Swaps</h1></a>
                 <?php echo date('l, F jS, Y'); 
                 
                 $name = $_SESSION["name"];
@@ -65,7 +65,8 @@
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">About Us</a>
                   <a href="#">Help</a>
-                  <a href="login.php">Log Out</a>
+                  <!--<button onclick="endFunction()"><a onClick="endFunction()" href="">Log Out</a></button>-->
+                  <a href="destroy.php">Log Out</a>
                 </div>
             </div>
 		</header>
@@ -98,6 +99,7 @@
                             echo '</div>';										
                             echo '</div>';
                         }
+                        
 						$db->close();
 						
 						?>
@@ -121,7 +123,7 @@
 					<h3>Tech</h3>
 					<ul>
 						<li><a href="laptops.php">Laptops</a></li>
-						<li><a href="monitors/php">Monitors</a></li>
+						<li><a href="monitors.php">Monitors</a></li>
 						<li><a href="consoles.php">Consoles</a></li>
 						<li><a href="speakers.php">Speakers</a></li>
 						<li><a href="games.php">Games</a></li>

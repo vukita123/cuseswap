@@ -11,6 +11,7 @@ or die('Error connecting to MySQL server.');
 if (checkLogin() == 'non-existing'){
             die('WRONG USERNAME OR PASSWORD');
 }else{
+    
     header("Location: bicycles.php"); 
 }
 
