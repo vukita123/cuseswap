@@ -65,7 +65,7 @@
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">About Us</a>
                   <a href="#">Help</a>
-                  <a href="#">Log Out</a>
+                  <a href="login.php">Log Out</a>
                 </div>
             </div>
 		</header>

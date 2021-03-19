@@ -62,6 +62,7 @@ if ($uploadOk == 0) {
     } else {
         echo "Error: " . $query . "<br>" . $db->error;
     }
+    header("Location: bicycles.php");
 
     //header("Location: bicycles.php"); 
   } else {
