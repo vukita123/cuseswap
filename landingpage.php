@@ -40,6 +40,7 @@ $name = $_POST["login"];
 $password = $_POST["password"];
 $_SESSION["name"] = $name;
 $_SESSION["password"] = $password;
+//$_SESSION["current"] = 'bicycles';
 ?>
 Welcome <?php echo " name: ".$name." password: ".$password." "; 
     
@@ -52,10 +53,6 @@ $testresult = $db->query($testing);
 
 echo checkLogin();
 while($row = $testresult -> fetch_assoc()){
-    //var_dump($row);
     $_SESSION["user_id"] = $row["user_id"];
-    //echo $_SESSION["user_id"];
-    //echo 'works?';
 }
-//print_r($_SESSION);
 ?>

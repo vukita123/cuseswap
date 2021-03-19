@@ -42,6 +42,7 @@
                 <option value="humidifiers">Humidifier</option>
                 <option value="hoodies">Hoodie</option>
                 <option value="shirts">Shirts</option>
+                <option value="pants">Pants</option>
                 <option value="tshirts">T-shirts</option>
                 <option value="shorts">Shorts</option>
                 <option value="jackets">Jacket</option>
