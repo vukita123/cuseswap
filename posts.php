@@ -34,6 +34,8 @@
                         }
                     }
                 }
+
+
         </script>
 	
 	</head>
@@ -50,14 +52,9 @@
 		<header id="header">
 			<div class="innertube">
 				<a href="bicycles.php"><h1>Cuse Swaps</h1></a>
-                <?php echo date('l, F jS, Y'); 
-                
+                <?php
                 $name = $_SESSION["name"];
-                $password = $_SESSION["password"];
                 $user_id = $_SESSION["user_id"];
-                ?>
-				Welcome <?php echo " name: ".$name." password: ".$password." "; 
-                 
                 ?>
 			</div>
             <div class="dropdown">
@@ -75,9 +72,6 @@
             <form action="add.php">
                 <button class="addbutton">Add</button>
             </form>
-			<form action="posts.php">
-                <button class="addbutton">My posts</button>
-            </form>
         </div>
 		
 		<div id="wrapper">
@@ -88,9 +82,15 @@
                         
 						<?php
                         $current = 'bicycles';    
-						$smt = "SELECT * FROM items WHERE item_category = '$current'";
-						$items = $db->query($smt);
-																
+                        $smt = "SELECT * FROM items WHERE item_user_id = '$user_id'";
+                        $items = $db->query($smt);
+                        
+                        function dropFunction($itemid){
+                            $dropquery = "DELETE * FROM itmes WHERE item_id = '$itemid'";
+                            $db = mysqli_connect('localhost','root','','oes');
+                            $db->query($dropquery);
+                        };
+                                                                
                         while($row = $items->fetch_assoc()) {
                             echo '<div class="feedblock"> ';
                             echo '<div class="pic">';
@@ -99,11 +99,12 @@
                             echo '<div class="postbottom">';
                             echo '<div class="name"> '.$row["item_user_name"]. '</div>';
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
+                            echo '<a href="dropitem.php?itemid='.$row["item_id"].'">Drop</a>';
                             echo '</div>';										
                             echo '</div>';
                         }
                         
-						$db->close();
+                        $db->close();
 						
 						?>
 						
