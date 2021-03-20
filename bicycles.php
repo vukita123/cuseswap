@@ -50,14 +50,11 @@
 		<header id="header">
 			<div class="innertube">
 				<a href="bicycles.php"><h1>Cuse Swaps</h1></a>
-                <?php echo date('l, F jS, Y'); 
+                <?php //echo date('l, F jS, Y'); 
                 
                 $name = $_SESSION["name"];
                 $password = $_SESSION["password"];
                 $user_id = $_SESSION["user_id"];
-                ?>
-				Welcome <?php echo " name: ".$name." password: ".$password." "; 
-                 
                 ?>
 			</div>
             <div class="dropdown">
@@ -71,13 +68,17 @@
             </div>
 		</header>
 
-        <div class="btn">
-            <form action="add.php">
-                <button class="addbutton">Add</button>
-            </form>
-			<form action="posts.php">
-                <button class="addbutton">My posts</button>
-            </form>
+        <div class="upperbar">
+            <div class="addbtn">
+				<form action="add.php">
+					<button class="addbutton">Add</button>
+				</form>
+			</div>
+			<div class="addbtn">
+				<form action="posts.php">
+					<button class="addbutton">My posts</button>
+				</form>
+			</div>
         </div>
 		
 		<div id="wrapper">
@@ -97,7 +98,7 @@
                             echo '<img src="'.$row["item_URL"].'">';
                             echo '</div>';
                             echo '<div class="postbottom">';
-                            echo '<div class="name"> '.$row["item_user_name"]. '</div>';
+                            echo '<div class="name"> '.$row["item_name"]. '</div>';
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
                             echo '</div>';										
                             echo '</div>';
@@ -120,7 +121,7 @@
 						<li><a href="bicycles.php">Bicycles</a></li>
 						<li><a href="skateboards.php">Skateboards</a></li>
 						<li><a href="rollerblades.php">Rollerblades</a></li>
-						<li><a href="outdoor.php">Outdoor Sports</a></li>
+						<li><a href="outdoor.php">Outdoors</a></li>
 						<!--<li><a href="#"></a></li>-->
 					</ul>
 					<h3>Tech</h3>
@@ -154,11 +155,11 @@
 		
 		</div>
 		
-		<footer id="footer">
+		<!--<footer id="footer">
 			<div class="innertube">
 				<p>Footer...</p>
 			</div>
-		</footer>
+		</footer>-->
 	
 	</body>
 </html>

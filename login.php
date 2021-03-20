@@ -17,7 +17,7 @@
     <div class="login">
         <h1>Welcome to Cuse Swaps!</h1>
         <form action="landingpage.php" method="post">
-            <p><input type="text" name="login" value="" placeholder="Username"></p>
+            <p><input type="text" name="login" value="" placeholder="First Name"></p>
             <p><input type="password" name="password" value="" placeholder="Password"></p>
             <p class="remember_me">
             <label>
