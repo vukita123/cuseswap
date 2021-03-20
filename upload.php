@@ -45,6 +45,7 @@ if ($uploadOk == 0) {
     // adding to items
     $user_id = $_SESSION["user_id"];
     $name = $_SESSION["name"];
+    $user_number = $_SESSION["user_number"];
     $itemname = $_POST["itemname"];
     $itemcategory = $_POST["itemcategory"];
     $itemcondition = $_POST["itemcondition"];
@@ -55,8 +56,8 @@ if ($uploadOk == 0) {
     echo $itemworth;
     echo $itemcondition;
     echo $target_file;
-    $query = "INSERT INTO items (item_name,item_category,item_worth,item_condition,item_user_id, item_url, item_user_name) values
-    ('$itemname', '$itemcategory', '$itemworth', '$itemcondition', '$user_id', '$target_file', '$name' )";
+    $query = "INSERT INTO items (item_name,item_category,item_worth,item_condition,item_user_id, item_url, item_user_name, item_user_number) values
+    ('$itemname', '$itemcategory', '$itemworth', '$itemcondition', '$user_id', '$target_file', '$name', '$user_number' )";
     if ($db->query($query) === TRUE) {
         echo "New record created successfully";
     } else {

@@ -54,5 +54,6 @@ $testresult = $db->query($testing);
 echo checkLogin();
 while($row = $testresult -> fetch_assoc()){
     $_SESSION["user_id"] = $row["user_id"];
+    $_SESSION["user_number"] = $row["user_phone_number"];
 }
 ?>

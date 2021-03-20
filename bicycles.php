@@ -55,10 +55,11 @@
                 $name = $_SESSION["name"];
                 $password = $_SESSION["password"];
                 $user_id = $_SESSION["user_id"];
+				$user_number = $_SESSION["user_number"];
                 ?>
 			</div>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <button onclick="myFunction()" class="dropbtn">|||||</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">About Us</a>
                   <a href="#">Help</a>
@@ -71,12 +72,12 @@
         <div class="upperbar">
             <div class="addbtn">
 				<form action="add.php">
-					<button class="addbutton">Add</button>
+					<button class="addbutton">Add a post!</button>
 				</form>
 			</div>
 			<div class="addbtn">
 				<form action="posts.php">
-					<button class="addbutton">My posts</button>
+					<button class="addbutton">Manage my posts</button>
 				</form>
 			</div>
         </div>
@@ -98,8 +99,18 @@
                             echo '<img src="'.$row["item_URL"].'">';
                             echo '</div>';
                             echo '<div class="postbottom">';
+                            echo '<div class="postbottomleft">';
                             echo '<div class="name"> '.$row["item_name"]. '</div>';
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
+                            echo '</div>';
+							echo '<div class="postbottomright">';
+                            echo '<div>';
+                            echo ''.$row["item_user_name"].'';
+							echo '</div>';
+							echo '<div>';
+                            echo ''.$user_number.'';
+							echo '</div>';
+                            echo '</div>';
                             echo '</div>';										
                             echo '</div>';
                         }

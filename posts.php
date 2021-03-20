@@ -97,9 +97,15 @@
                             echo '<img src="'.$row["item_URL"].'">';
                             echo '</div>';
                             echo '<div class="postbottom">';
+                            echo '<div class="postbottomleft">';
                             echo '<div class="name"> '.$row["item_user_name"]. '</div>';
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
+                            echo '</div>';
+                            echo '<div class="postbottomright">';
+                            echo '<div>';
                             echo '<a href="dropitem.php?itemid='.$row["item_id"].'">Drop</a>';
+                            echo '</div>';
+                            echo '</div>';
                             echo '</div>';										
                             echo '</div>';
                         }
