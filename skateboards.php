@@ -49,31 +49,37 @@
 
 		<header id="header">
 			<div class="innertube">
-				<a href="index.php"><h1>Cuse Swaps</h1></a>
-                <?php echo date('l, F jS, Y'); 
+				<a href="bicycles.php"><h1>Cuse Swaps</h1></a>
+                <?php //echo date('l, F jS, Y'); 
                 
                 $name = $_SESSION["name"];
                 $password = $_SESSION["password"];
                 $user_id = $_SESSION["user_id"];
-                ?>
-				Welcome <?php echo " name: ".$name." password: ".$password." "; 
-                 
+				$user_number = $_SESSION["user_number"];
                 ?>
 			</div>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <button onclick="myFunction()" class="dropbtn">|||||</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">About Us</a>
                   <a href="#">Help</a>
-                  <a href="login.php">Log Out</a>
+                  <!--<button onclick="endFunction()"><a onClick="endFunction()" href="">Log Out</a></button>-->
+                  <a href="destroy.php">Log Out</a>
                 </div>
             </div>
 		</header>
 
-        <div class="btn">
-            <form action="add.php">
-                <button class="addbutton">Add</button>
-            </form>
+        <div class="upperbar">
+            <div class="addbtn">
+				<form action="add.php">
+					<button class="addbutton">Add a post!</button>
+				</form>
+			</div>
+			<div class="addbtn">
+				<form action="posts.php">
+					<button class="addbutton">Manage my posts</button>
+				</form>
+			</div>
         </div>
 		
 		<div id="wrapper">
@@ -93,11 +99,22 @@
                             echo '<img src="'.$row["item_URL"].'">';
                             echo '</div>';
                             echo '<div class="postbottom">';
-                            echo '<div class="name"> '.$row["item_user_name"]. '</div>';
+                            echo '<div class="postbottomleft">';
+                            echo '<div class="name"> '.$row["item_name"]. '</div>';
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
+                            echo '</div>';
+							echo '<div class="postbottomright">';
+                            echo '<div class="bottomrightname">';
+                            echo ''.$row["item_user_name"].'';
+							echo '</div>';
+							echo '<div>';
+                            echo '('.$row["item_user_number"].')';
+							echo '</div>';
+                            echo '</div>';
                             echo '</div>';										
                             echo '</div>';
                         }
+                        
 						$db->close();
 						
 						?>
@@ -115,13 +132,13 @@
 						<li><a href="bicycles.php">Bicycles</a></li>
 						<li><a href="skateboards.php">Skateboards</a></li>
 						<li><a href="rollerblades.php">Rollerblades</a></li>
-						<li><a href="outdoor.php">Outdoor Sports</a></li>
+						<li><a href="outdoor.php">Outdoors</a></li>
 						<!--<li><a href="#"></a></li>-->
 					</ul>
 					<h3>Tech</h3>
 					<ul>
 						<li><a href="laptops.php">Laptops</a></li>
-						<li><a href="monitors/php">Monitors</a></li>
+						<li><a href="monitors.php">Monitors</a></li>
 						<li><a href="consoles.php">Consoles</a></li>
 						<li><a href="speakers.php">Speakers</a></li>
 						<li><a href="games.php">Games</a></li>
@@ -149,11 +166,11 @@
 		
 		</div>
 		
-		<footer id="footer">
+		<!--<footer id="footer">
 			<div class="innertube">
 				<p>Footer...</p>
 			</div>
-		</footer>
+		</footer>-->
 	
 	</body>
 </html>

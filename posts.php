@@ -68,10 +68,13 @@
             </div>
 		</header>
 
-        <div class="btn">
-            <form action="add.php">
-                <button class="addbutton">Add</button>
-            </form>
+        <div class="upperbar">
+            <div class="addbtn">
+				<form action="add.php">
+					<button class="addbutton">Add a post!</button>
+				</form>
+			</div>
+			
         </div>
 		
 		<div id="wrapper">
@@ -102,9 +105,12 @@
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
                             echo '</div>';
                             echo '<div class="postbottomright">';
-                            echo '<div>';
+                            echo '<div class="bottomrightname">';
                             echo '<a href="dropitem.php?itemid='.$row["item_id"].'">Drop</a>';
-                            echo '</div>';
+							echo '</div>';
+							echo '<div>';
+                            echo '';
+							echo '</div>';
                             echo '</div>';
                             echo '</div>';										
                             echo '</div>';

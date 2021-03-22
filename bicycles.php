@@ -104,11 +104,11 @@
                             echo '<div class="number"> '.$row["item_worth"].'</div>';
                             echo '</div>';
 							echo '<div class="postbottomright">';
-                            echo '<div>';
+                            echo '<div class="bottomrightname">';
                             echo ''.$row["item_user_name"].'';
 							echo '</div>';
 							echo '<div>';
-                            echo ''.$user_number.'';
+                            echo '('.$row["item_user_number"].')';
 							echo '</div>';
                             echo '</div>';
                             echo '</div>';										

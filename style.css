@@ -84,6 +84,7 @@ body {
 img{
     height:300px;
     width: 100%;
+    border-radius: 5px;
 }
 
 .postbottom{
@@ -97,11 +98,25 @@ img{
 }
 
 .postbottomright{
-    width: 50%;
+    margin-top: 35px;
+    margin-right: 10px;
+    display: inline-flex ;
+    justify-content: flex-end;
+    width: 150px;
     height: 100%;
 }
 
+.bottomrightname{
+    font-weight: bold;
+}
+
+
+.dropbottom{
+    width: 40%;
+}
+
 .postbottomright a{
+    margin-left: 50px;
     text-decoration: underline;
     color: whitesmoke;
 }

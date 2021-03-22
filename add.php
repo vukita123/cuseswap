@@ -54,9 +54,7 @@
             <p><input type="text" name="itemvalue" value="" placeholder="Perceived monetary value"></p>
             <input type="submit" value="Upload" name="submit">
         </form>
-        <?php print_r($_SESSION);
-            print_r($_SESSION["user_id"]);
-         ?>
+        
     </div>
 </body>
 </html>
